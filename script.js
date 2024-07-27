@@ -46,7 +46,7 @@ document.addEventListener('keyup', function (event) { // no spam
 				}
 				break;
 
-                // goes to the eyebeast page of current region page (PLEASE ONLY CLICK THIS IF YOU ARE ON A REGION PAGE)
+                // goes to the eyebeast page of current region page (PLEASE ONLY CLICK THIS IF ON A REGION PAGE)
                 case 'KeyO':
 				window.location.assign("https://eyebeast.calref.ca/?" + regionname);
 		}
