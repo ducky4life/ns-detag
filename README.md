@@ -16,13 +16,13 @@ Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) 
 
 # Functionalities
 
-### Governor rename (defaults to L)
+## Governor rename (defaults to L)
 
 first button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
  
 second one replaces current gov name with the default one and immediately renames it, no submit button required
 
-### Eyebeast (defaults to O)
+## Eyebeast (defaults to O)
 
 Takes you to the [Eyebeast](https://eyebeast.calref.ca) page of the current region page
 
