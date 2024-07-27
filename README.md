@@ -2,6 +2,8 @@
 ### works with fast.nationstates.net :D
 Extra detag functionalities i guess. idk javascript
 
+this is meant to be used on top of existing update tools such as breeze++ or gauntlet, thats why i chose keybinds that these scripts dont/rarely use
+
 i pieced this together by pattern recognition and sampling different ns scripts, i dont know js
 
 you can change the keybind by replacing L/O in keyL/keyO/etc with another key of your choice
