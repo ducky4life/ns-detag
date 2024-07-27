@@ -11,7 +11,7 @@ you can change the keybind by replacing L/O in keyL/keyO/etc with another key of
 # Installation
 I use TamperMonkey for this, you can use whatever works for you
 
-Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js), run it, enjoy
+Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), run it, enjoy
 
 # Functionalities
 
