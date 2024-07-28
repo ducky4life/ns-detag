@@ -1,16 +1,14 @@
 # ns-detag
 **works with fast.nationstates.net :D**
 
-Extra detag functionalities i guess. idk javascript (pls ignore my shit code)
-
 this is meant to be used on top of existing update tools such as breeze++ or gauntlet, thats why i chose keybinds that these scripts dont/rarely use
 
 i pieced this together by pattern recognition and sampling different ns scripts, i dont know js
 
-you can change the keybind by replacing L/O in keyL/keyO/etc with another key of your choice
+you can change the keybind by replacing L/O in KeyL/KeyO/etc with another key of your choice
 
 # Installation
-I use TamperMonkey for this, you can use whatever works for you
+I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatever works for you
 
 Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), optionally change keybinds, run it, enjoy
 
