@@ -12,7 +12,7 @@ I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatev
 
 Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), optionally change keybinds, run it, enjoy
 
-[Latest Release](https://github.com/ducky4life/ns-detag/releases/latest)
+[Latest Release](https://github.com/ducky4life/ns-detag/releases/latest), read the changelogs here
 
 ## Having problems?
 
