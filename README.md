@@ -18,7 +18,7 @@ Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) 
 
 First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
  
-Second one replaces current gov name with the default one and immediately renames it, no submit button required
+Second one replaces current gov name with the default one and immediately renames it, no confirmation required
 
 ## Eyebeast (defaults to O)
 
