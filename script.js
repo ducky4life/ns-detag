@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.1.0
+// @version      1.1.1
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
