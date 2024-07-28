@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.0.1
+// @version      1.1.0
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -30,6 +30,7 @@ document.addEventListener('keyup', function (event) { // no spam
 	} else {
 		switch (event.code) { // actual code starts here
 
+
                 // restores gov name to original for detags
                 case 'KeyL':
 
@@ -46,9 +47,37 @@ document.addEventListener('keyup', function (event) { // no spam
 				}
 				break;
 
+
                 // goes to the eyebeast page of current region page (PLEASE ONLY CLICK THIS IF ON A REGION PAGE)
                 case 'KeyO':
-				window.location.assign("https://eyebeast.calref.ca/?" + regionname);
+                window.location.assign("https://eyebeast.calref.ca/?" + regionname);
+                break;
+
+
+                // toggles template
+                case 'KeyK':
+
+                if (window.location.href.includes('template-overall')) { // on none
+                window.location.href = document.URL.replace('template-overall=none/', '');
+                }
+
+                else { // on normal
+                window.location.href = `/template-overall=none${document.URL.replace(domain, '')}`;
+                }
+                break;
+
+
+                // toggles fast.nationstates.net
+                case 'KeyI':
+
+                if (window.location.href.includes('fast.nationstates.net')) { // on fast
+                window.location.href = document.URL.replace('fast.', 'www.');
+                }
+
+                else { // on normal
+                window.location.href = document.URL.replace('www.', 'fast.');
+                }
+                break;
 		}
 	}
 });
