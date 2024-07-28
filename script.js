@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.0
+// @version      1.0.0
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -12,7 +12,7 @@
 
 // i pieced this together by pattern recognition and sampling different ns scripts, i dont know js
 // some of the code here is modified from https://github.com/rootabeta/YAFFeather
-// you can change the keybind by replacing L/O in keyL/keyO with another key of your choice
+// you can change the keybind by replacing L/O in KeyL/KeyO with another key of your choice
 
 
 // ignore my shit code
