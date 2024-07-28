@@ -33,3 +33,7 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
 ## Toggle fast (defaults to I)
 
 Toggles between the fast.nationstates.net version of current page
+
+# Having problems?
+
+Contact Ducky on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
