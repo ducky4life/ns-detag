@@ -12,7 +12,7 @@ I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatev
 
 Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), optionally change keybinds, run it, enjoy
 
-# Having problems?
+## Having problems?
 
 Contact Ducky on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
 
