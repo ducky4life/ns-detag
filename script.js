@@ -43,7 +43,7 @@ document.addEventListener('keyup', function (event) { // no spam
 				}
 
 				else { // go to gov page
-					window.location.assign("https://www.nationstates.net/page=regional_officer/region/office=governor/");
+					window.location.assign(domain + "/page=regional_officer/region/office=governor/");
 				}
 				break;
 
