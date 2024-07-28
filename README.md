@@ -16,7 +16,7 @@ Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) 
 
 ## Governor rename (defaults to L)
 
-First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
+First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there (works with fast.nationstates.net)
  
 Second one replaces current gov name with the default one and immediately renames it, no confirmation required
 
