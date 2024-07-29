@@ -3,16 +3,29 @@
 
 this is meant to be used on top of existing update tools such as breeze++ or gauntlet, thats why i chose keybinds that these scripts dont/rarely use
 
-you can change the keybind by replacing L/O in KeyL/KeyO/etc with another key of your choice
-
 i pieced this together by pattern recognition and sampling different ns scripts, i dont know js
 
 # Installation
 I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatever works for you
 
-Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), optionally change keybinds, run it, enjoy
+Download [script.js](https://github.com/ducky4life/ns-detag/raw/main/script.js) (or paste it in your script runner), optionally change keybinds and RO name, run it, enjoy
 
 [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest), read the changelogs here
+
+## Setting/Changing keybinds and RO name
+
+You can change the keybinds by replacing the constant value with another key of your choice in the script, and replace `detag` with your RO name :D
+
+for a list of key names, go [here](https://www.toptal.com/developers/keycode) and copy the `event.code` info!
+
+```
+const ROname = "detag"
+const restoregovkey = "KeyL"
+const eyebeastkey = "KeyO"
+const toggletemplatekey = "KeyK"
+const togglefastkey = "KeyI"
+const appointselfROkey = "KeyJ"
+```
 
 ## Having problems?
 
@@ -20,11 +33,15 @@ Contact Ducky on Discord, email: ducky4life@duck.com, or [telegram me on NationS
 
 # Functionalities
 
-## Governor rename (defaults to L)
+## Governor Rename (defaults to L)
 
 First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there (works with fast.nationstates.net)
  
 Second one replaces current gov name with the default one and immediately renames it, no confirmation required
+
+## Appoint Self as Regional Officer (defaults to J)
+
+Same functionality as renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
 
 ## Eyebeast (defaults to O)
 
