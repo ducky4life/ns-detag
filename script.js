@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.2.0
+// @version      1.2.1
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -10,8 +10,8 @@
 
 
 // please set your keybinds and RO name here
-// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace 'detag' with your RO name :D
-// for a list of key names, go to https://www.toptal.com/developers/keycode and copy the 'event.code' info!
+// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace "detag" with your RO name :D
+// for a list of key names, go to https://www.toptal.com/developers/keycode and copy the "event.code" info!
 // github repo: https://github.com/ducky4life/ns-detag
 
 const ROname = "detag"
@@ -31,9 +31,6 @@ const reg = /(?<=.nationstates.net).*$/
 const domain = regionlink.replace(reg, "")
 const region = regionlink.replace(domain, "")
 const regionname = region.replace("/", "")
-const nation = document.getElementById("loggedin").getAttribute("data-nname")
-
-
 
 // code i guess
 document.addEventListener("keyup", function (event) { // no spam
@@ -72,7 +69,7 @@ document.addEventListener("keyup", function (event) { // no spam
                 // toggles template
                 case toggletemplatekey:
 
-                if (window.location.href.includes("template-overall")) { // on none
+                if (window.location.href.includes("template-overall=none")) { // on none
                 window.location.href = document.URL.replace("template-overall=none/", "");
                 }
 
@@ -99,7 +96,8 @@ document.addEventListener("keyup", function (event) { // no spam
 
                 // appoint self as RO
                 case appointselfROkey:
-                if (window.location.href.includes("page=regional_officer/nation=" + nation)) {
+
+                if (window.location.href.includes("page=regional_officer/nation=" + document.getElementById("loggedin").getAttribute("data-nname"))) {
 					document.getElementsByName("office_name")[0].value = ROname;
                     document.getElementsByName("authority_A")[0].click();
                     document.getElementsByName("authority_C")[0].click();
@@ -108,7 +106,7 @@ document.addEventListener("keyup", function (event) { // no spam
 				}
 
 				else { // go to self RO page
-					window.location.assign(domain + "/page=regional_officer/nation=" + nation);
+					window.location.assign(domain + "/page=regional_officer/nation=" + document.getElementById("loggedin").getAttribute("data-nname"));
 				}
                 break;
 
