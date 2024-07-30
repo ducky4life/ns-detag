@@ -8,6 +8,8 @@ i pieced this together by pattern recognition and sampling different ns scripts,
 # Installation
 I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatever works for you
 
+If you use TamperMonkey, go to the script.user.js link below and TamperMonkey should pop up automatically
+
 Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), optionally change keybinds and RO name, run it, enjoy
 
 [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest), read the changelogs here
