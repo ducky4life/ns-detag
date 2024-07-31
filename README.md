@@ -10,7 +10,7 @@ I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatev
 
 Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), optionally change keybinds and RO name, run it, enjoy
 
-If you use TamperMonkey, go to the script.user.js link below and TamperMonkey should pop up automatically with the latest release
+If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the latest release
 
 [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest), read the changelogs here
 
