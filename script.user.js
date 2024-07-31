@@ -10,8 +10,8 @@
 
 
 // please set your keybinds and RO name here
-// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace "detag" with your RO name :D
-// for a list of key names, go to https://www.toptal.com/developers/keycode and copy the "event.code" info!
+// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace 'detag' with your RO name :D
+// for a list of key names, go to https://www.toptal.com/developers/keycode and copy the 'event.code' info!
 // github repo: https://github.com/ducky4life/ns-detag
 
 const ROname = "detag"
