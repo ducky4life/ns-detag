@@ -16,17 +16,19 @@ If you use TamperMonkey, go to the script.user.js link above and TamperMonkey sh
 
 ## Setting/Changing keybinds and RO name
 
-You can change the keybinds by replacing the constant value with another key of your choice in the script, and replace `detag` with your RO name :D
+You can change the keybinds by replacing the constant value with another key of your choice in the script, and replace `detag` with your RO name/`password123` with your password for puppets :D
 
 for a list of key names, go [here](https://www.toptal.com/developers/keycode) and copy the `event.code` info!
 
 ```
 const ROname = "detag"
+const password = "password123"
 const restoregovkey = "KeyL"
 const eyebeastkey = "KeyO"
 const toggletemplatekey = "KeyK"
 const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
+const puppetloginkey = "KeyY"
 ```
 
 ## Having problems?
@@ -44,6 +46,16 @@ Second one replaces current gov name with the default one and immediately rename
 ## Appoint Self as Regional Officer (defaults to J)
 
 Same functionality as renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
+
+## Switcher Log In (defaults to Y)
+
+**Please set your password in the `const password = ` line**
+
+Logs in to another puppet on the nation page of the puppet that you want to log into
+
+Works with templated page, pressing the login key on the nation page of the puppet will take you to the World Assembly page
+
+**Only works if you have the same password across your puppets**
 
 ## Eyebeast (defaults to O)
 
