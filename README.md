@@ -47,7 +47,7 @@ Second one replaces current gov name with the default one and immediately rename
 
 Same functionality as renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
 
-## Switcher Log In (defaults to Y)
+## Switcher Login (defaults to Y)
 
 **Please set your password in the `const password = ` line**
 
