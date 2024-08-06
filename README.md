@@ -55,7 +55,7 @@ Logs in to another puppet on the nation page of the puppet that you want to log 
 
 Works with template-overall=none pages, pressing the login key on the nation page of the puppet will take you to the World Assembly page
 
-**Only works if you have the same password across your puppets**
+**Only works if you have the same password across your puppets, obviously don't use this on nations that aren't yours if you don't want to spam people with bad login attempts**
 
 ## Eyebeast (defaults to O)
 
