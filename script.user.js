@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.2.2
+// @version      1.3.0
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -9,17 +9,19 @@
 // ==/UserScript==
 
 
-// please set your keybinds and RO name here
-// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace 'detag' with your RO name :D
+// please set your keybinds/password/RO name here
+// you can change the keybinds by replacing the constant value with another key of your choice in the script, and replace 'detag' with your RO name/'password123' with your password for puppets :D
 // for a list of key names, go to https://www.toptal.com/developers/keycode and copy the 'event.code' info!
 // github repo: https://github.com/ducky4life/ns-detag
 
 const ROname = "detag"
+const password = "password123" // your password for your puppets (all puppets must share the same password)
 const restoregovkey = "KeyL"
 const eyebeastkey = "KeyO"
 const toggletemplatekey = "KeyK"
 const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
+const puppetloginkey = "KeyY"
 
 
 
@@ -31,6 +33,7 @@ const reg = /(?<=.nationstates.net).*$/
 const domain = regionlink.replace(reg, "")
 const region = regionlink.replace(domain, "")
 const regionname = region.replace("/", "")
+const nationpage = regionname.replace("template-overall=none/", "")
 
 // code i guess
 document.addEventListener("keyup", function (event) { // no spam
@@ -60,7 +63,7 @@ document.addEventListener("keyup", function (event) { // no spam
 
 
                 // goes to the eyebeast page of current region page (PLEASE ONLY CLICK THIS IF ON A REGION PAGE)
-                case "KeyO":
+                case eyebeastkey:
                 window.location.assign("https://eyebeast.calref.ca/?" + regionname);
                 break;
 
@@ -108,6 +111,10 @@ document.addEventListener("keyup", function (event) { // no spam
 				else { // go to self RO page
 					window.location.assign(domain + "/page=regional_officer/nation=" + document.getElementById("loggedin").getAttribute("data-nname"));
 				}
+                break;
+
+                case puppetloginkey: // go to wa page of the current nation page after loggin in with provided password
+                window.location.assign(domain + "/page=un?" + nationpage + "&password=" + password + "&logging_in=1");
                 break;
 
 		}
