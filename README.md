@@ -53,7 +53,7 @@ Same functionality as renaming governor, but appointing your nation as RO instea
 
 Logs in to another puppet on the nation page of the puppet that you want to log into
 
-Works with templated page, pressing the login key on the nation page of the puppet will take you to the World Assembly page
+Works with template-overall=none pages, pressing the login key on the nation page of the puppet will take you to the World Assembly page
 
 **Only works if you have the same password across your puppets**
 
