@@ -53,7 +53,7 @@ Same functionality as renaming governor, but appointing your nation as RO instea
 
 Logs in to another puppet on the nation page of the puppet that you want to log into
 
-Works with template-overall=none pages, pressing the login key on the nation page of the puppet will take you to the World Assembly page logged in to the puppet
+Works with template-overall=none pages, pressing the login key on the nation page of the puppet will take you to the World Assembly page logged in to the puppet, thanks Reliant :D
 
 **Only works if you have the same password across your puppets, obviously don't use this on nations that aren't yours if you don't want to spam people with bad login attempts**
 
@@ -69,4 +69,4 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
 
 ## Toggle fast (defaults to I)
 
-Toggles between the fast.nationstates.net version of current page
+Toggles between the fast.nationstates.net version of current pag
