@@ -69,4 +69,4 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
 
 ## Toggle fast (defaults to I)
 
-Toggles between the fast.nationstates.net version of current pag
+Toggles between the fast.nationstates.net version of current page
