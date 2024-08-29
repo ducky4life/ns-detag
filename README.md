@@ -33,7 +33,7 @@ const puppetloginkey = "KeyY"
 
 ## Having problems?
 
-Contact Ducky on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
+Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
 
 # Functionalities
 
