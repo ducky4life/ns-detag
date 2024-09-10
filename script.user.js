@@ -113,7 +113,11 @@ document.addEventListener("keyup", function (event) { // no spam
 				}
                 break;
 
-                case puppetloginkey: // go to wa page of the current nation page after loggin in with provided password
+
+
+		// go to wa page of the current nation page after loggin in with provided password
+                case puppetloginkey:
+
                 window.location.assign(domain + "/page=un?" + nationpage + "&password=" + password + "&logging_in=1");
                 break;
 
