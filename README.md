@@ -1,7 +1,7 @@
 # ns-detag
 
 > [!WARNING]
-> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), this script is no longer legal. A fix is on the way.
+> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), the current script is no longer legal. A fix is on the way.
 
 **works with fast.nationstates.net :D**
 
@@ -14,19 +14,24 @@ I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatev
 
 Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), optionally change keybinds and RO name, run it, enjoy
 
-If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the latest release
+If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest)
 
-[Latest Release](https://github.com/ducky4life/ns-detag/releases/latest), read the changelogs here
 
-## Setting/Changing keybinds and RO name
+# Configuration
 
-You can change the keybinds by replacing the constant value with another key of your choice in the script, and replace `detag` with your RO name/`password123` with your password for puppets :D
+> [!IMPORTANT]
+> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), you must set your main nation to use the script.
+> Please enter your main nation in `const main_nation_name = ""`.
+
+PLease also set your password and Regional Officer name for all of the functions to work properly!
+
+## Changing keybinds
+
+You can change the keybinds by replacing the constant value with another key of your choice in the script
 
 for a list of key names, go [here](https://www.toptal.com/developers/keycode) and copy the `event.code` info!
 
 ```
-const ROname = "detag"
-const password = "password123"
 const restoregovkey = "KeyL"
 const eyebeastkey = "KeyO"
 const toggletemplatekey = "KeyK"
@@ -53,7 +58,7 @@ Same functionality as renaming governor, but appointing your nation as RO instea
 
 ## Switcher Login (defaults to Y)
 
-**Please set your password in the `const password = ` line**
+**Please set your password in the `const password = ` line in Configuration**
 
 Logs in to another puppet on the nation page of the puppet that you want to log into
 
