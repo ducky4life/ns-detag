@@ -1,7 +1,7 @@
 # ns-detag
 
 > [!WARNING]
-> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), this script is no longer legal. I will fix it when I find the time to.
+> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), this script is no longer legal. A fix is on the way.
 
 **works with fast.nationstates.net :D**
 
