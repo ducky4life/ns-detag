@@ -1,4 +1,8 @@
 # ns-detag
+
+> [!WARNING]
+> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), this script is no longer legal. I will fix it when I find the time to.
+
 **works with fast.nationstates.net :D**
 
 this is meant to be used on top of existing update tools such as breeze++ or gauntlet, thats why i chose keybinds that these scripts dont/rarely use
