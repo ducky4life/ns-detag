@@ -1,18 +1,16 @@
 # ns-detag
 
 > [!WARNING]
-> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), the current script is no longer legal. A fix is on the way.
+> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), your script may be outdated. Please update the script with the latest version to comply with the rules.
 
 **works with fast.nationstates.net :D**
 
-this is meant to be used on top of existing update tools such as breeze++ or gauntlet, thats why i chose keybinds that these scripts dont/rarely use
-
-i pieced this together by pattern recognition and sampling different ns scripts, i dont know js
+meant to be used on top of existing update tools such as breeze++ or gauntlet
 
 # Installation
 I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatever works for you
 
-Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), optionally change keybinds and RO name, run it, enjoy
+Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), enter your main nation, run it, enjoy
 
 If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest)
 
@@ -48,13 +46,13 @@ Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStat
 
 ## Governor Rename (defaults to L)
 
-First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there (works with fast.nationstates.net)
+First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
  
 Second one replaces current gov name with the default one and immediately renames it, no confirmation required
 
 ## Appoint Self as Regional Officer (defaults to J)
 
-Same functionality as renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
+Similar to renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
 
 ## Switcher Login (defaults to Y)
 
