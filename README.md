@@ -14,7 +14,6 @@ Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script
 
 If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest)
 
-
 # Configuration
 
 > [!IMPORTANT]
@@ -48,7 +47,7 @@ Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStat
 
 First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
  
-Second one replaces current gov name with the default one and immediately renames it, no confirmation required
+Second one replaces current gov name with the default one and immediately renames it
 
 ## Appoint Self as Regional Officer (defaults to J)
 
