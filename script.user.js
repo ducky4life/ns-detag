@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      1.3.1
+// @version      1.3.2
 // @description  meow
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -12,7 +12,7 @@
 
 // Configuration
 
-const version = "1_3_1"
+const version = "1_3_2"
 const main_nation_name = "" // IMPORTANT Please set your main nation name here to comply with the new script rules. The script will not work properly if you do not.
 const password = "" // your password for your puppets (all puppets must share the same password)
 const ROname = "detag" // replace 'detag' with your RO name
@@ -44,7 +44,9 @@ const region = regionlink.replace(domain, "")
 const regionname = region.replace("/", "")
 const nationpage = regionname.replace("template-overall=none/", "")
 const main = main_nation_name.replaceAll(" ", "_")
-const useragent = "?script=ns_detag__v" + version + "__by_ducky__used_by_" + main + "&userclick=" + Date.now()
+const identifier = "?script=ns_detag__v" + version + "__by_ducky__used_by_" + main + "&userclick="
+const userclick = Date.now()
+const useragent = identifier + userclick // .split(identifier)[0] to avoid useragent stacking
 
 
 // code i guess
@@ -68,7 +70,7 @@ document.addEventListener("keyup", function (event) { // no spam
 				}
 
 				else { // go to gov page
-					window.location.assign(domain + "/page=regional_officer/region/office=governor" + useragent);
+                    window.location.assign(domain + "/page=regional_officer/region/office=governor".split(identifier)[0] + useragent);
 				}
 				break;
 
@@ -85,11 +87,11 @@ document.addEventListener("keyup", function (event) { // no spam
                 case toggletemplatekey:
 
                 if (window.location.href.includes("template-overall=none")) { // on none
-                window.location.href = document.URL.replace("template-overall=none/", "") + useragent;
+                window.location.href = document.URL.replace("template-overall=none/", "").split(identifier)[0] + useragent;
                 }
 
                 else { // on normal
-                window.location.href = `/template-overall=none${document.URL.replace(domain, "")}` + useragent;
+                window.location.href = `/template-overall=none${document.URL.replace(domain, "")}`.split(identifier)[0] + useragent;
                 }
                 break;
 
@@ -99,11 +101,11 @@ document.addEventListener("keyup", function (event) { // no spam
                 case togglefastkey:
 
                 if (window.location.href.includes("fast.nationstates.net")) { // on fast
-                window.location.href = document.URL.replace("fast.", "www.") + useragent;
+                window.location.href = document.URL.replace("fast.", "www.").split(identifier)[0] + useragent;
                 }
 
                 else { // on normal
-                window.location.href = document.URL.replace("www.", "fast.") + useragent;
+                window.location.href = document.URL.replace("www.", "fast.").split(identifier)[0] + useragent;
                 }
                 break;
 
@@ -121,7 +123,7 @@ document.addEventListener("keyup", function (event) { // no spam
 				}
 
 				else { // go to self RO page
-					window.location.assign(domain + "/page=regional_officer/nation=" + document.getElementById("loggedin").getAttribute("data-nname") + useragent);
+					window.location.assign(domain + "/page=regional_officer/nation=" + document.getElementById("loggedin").getAttribute("data-nname").split(identifier)[0] + useragent);
 				}
                 break;
 
