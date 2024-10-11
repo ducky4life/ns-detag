@@ -20,7 +20,7 @@ If you use TamperMonkey, go to the script.user.js link above and TamperMonkey sh
 > Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), you must set your main nation to use the script.
 > Please enter your main nation in `const main_nation_name = ""`.
 
-PLease also set your password and Regional Officer name for all of the functions to work properly!
+Please also set your password and Regional Officer name for all of the functions to work properly!
 
 ## Changing keybinds
 
