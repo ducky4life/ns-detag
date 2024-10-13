@@ -53,7 +53,7 @@ Second one replaces current gov name with the default one and immediately rename
 
 Similar to renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities.
 
-First button press takes you to https;//www.nationstates.net/page=regional_officer/nation=yournationhere/ if you are not there, second one appoints RO.
+First button press takes you to https://www.nationstates.net/page=regional_officer/nation=yournationhere/ if you are not there, second one appoints RO.
 
 ## Switcher Login (defaults to Y)
 
