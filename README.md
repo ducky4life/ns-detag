@@ -37,7 +37,7 @@ const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
 ```
 
-## Having problems?
+## Having problems/have new ideas?
 
 Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
 
@@ -51,7 +51,9 @@ Second one replaces current gov name with the default one and immediately rename
 
 ## Appoint Self as Regional Officer (defaults to J)
 
-Similar to renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities
+Similar to renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities.
+
+First button press takes you to https;//www.nationstates.net/page=regional_officer/nation=yournationhere/ if you are not there, second one appoints RO.
 
 ## Switcher Login (defaults to Y)
 
