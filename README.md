@@ -10,10 +10,10 @@ meant to be used on top of existing update tools such as breeze++ or gauntlet
 ## my other scripts :D
 
 <a href="https://github.com/ducky4life/ns-blender">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=ducky4life&repo=ns-blender&theme=algolia" />
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-blender&theme=algolia" />
 </a>
 <a href="https://github.com/ducky4life/ns-zombie">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=ducky4life&repo=ns-zombie&theme=algolia" />
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-zombie&theme=algolia" />
 </a>
 
 # Installation
