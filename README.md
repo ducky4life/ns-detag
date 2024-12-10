@@ -37,10 +37,6 @@ const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
 ```
 
-## Having problems/have new ideas?
-
-Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
-
 # Functionalities
 
 ## Governor Rename (defaults to L)
@@ -75,6 +71,10 @@ Toggles between the template-overall=none version of current page
 
 This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant homies
 
+## Toggle fast (defaults to I)
+
+Toggles between the fast.nationstates.net version of current page
+
 ## my scripts :D
 
 <a href="https://github.com/ducky4life/ns-detag">
@@ -90,6 +90,6 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
   <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-cardfinder&theme=algolia" />
 </a>
 
-## Toggle fast (defaults to I)
+## Having problems/have new ideas?
 
-Toggles between the fast.nationstates.net version of current page
+Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
