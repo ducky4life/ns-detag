@@ -1,11 +1,23 @@
 # ns-detag
 
-> [!WARNING]
-> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), your script may be outdated. Please update the script with the latest version to comply with the rules.
-
 **works with fast.nationstates.net :D**
 
 meant to be used on top of existing update tools such as breeze++ or gauntlet
+
+## my scripts :D
+
+<a href="https://github.com/ducky4life/ns-detag">
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-detag&theme=algolia" />
+</a>
+<a href="https://github.com/ducky4life/ns-blender">
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-blender&theme=algolia" />
+</a>
+<a href="https://github.com/ducky4life/ns-zombie">
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-zombie&theme=algolia" />
+</a>
+<a href="https://github.com/ducky4life/ns-cardfinder">
+  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-cardfinder&theme=algolia" />
+</a>
 
 # Installation
 I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatever works for you
@@ -36,6 +48,10 @@ const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
 ```
+
+## Having problems/have new ideas?
+
+Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
 
 # Functionalities
 
@@ -74,22 +90,3 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
 ## Toggle fast (defaults to I)
 
 Toggles between the fast.nationstates.net version of current page
-
-## my scripts :D
-
-<a href="https://github.com/ducky4life/ns-detag">
-  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-detag&theme=algolia" />
-</a>
-<a href="https://github.com/ducky4life/ns-blender">
-  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-blender&theme=algolia" />
-</a>
-<a href="https://github.com/ducky4life/ns-zombie">
-  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-zombie&theme=algolia" />
-</a>
-<a href="https://github.com/ducky4life/ns-cardfinder">
-  <img align="center" src="https://ducky4life.vercel.app/api/pin/?username=ducky4life&repo=ns-cardfinder&theme=algolia" />
-</a>
-
-## Having problems/have new ideas?
-
-Contact me on Discord, email: ducky4life@duck.com, or [telegram me on NationStates](https://www.nationstates.net/page=compose_telegram?tgto=ducky)!
