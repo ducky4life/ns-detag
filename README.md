@@ -13,10 +13,6 @@ If you use TamperMonkey, go to the script.user.js link above and TamperMonkey sh
 
 # Configuration
 
-> [!IMPORTANT]
-> Per the [new script rules](https://forum.nationstates.net/viewtopic.php?p=41811907#p41811907), you must set your main nation to use the script.
-> Please enter your main nation in `const main_nation_name = ""`.
-
 Please also set your password and Regional Officer name for all of the functions to work properly!
 
 ## Changing keybinds
@@ -32,9 +28,50 @@ const toggletemplatekey = "KeyK"
 const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
+const detaginfokey = "Digit1"
+const detagactionkey = "Digit2"
+const flagkey = "Digit3"
+const bannerkey = "Digit4"
 ```
 
 # Usage
+
+## Semiautomatic WFE/Flag/Banner restoring using the script
+
+> [!IMPORTANT]
+> make sure you are logged in to RO nation and is on the region page
+
+### Getting detag information
+
+1. Press 1 to open up RMB, (un)suppress messages
+2. Press 1 to open eyebeast
+3. Use arrow keys to find native snapshot
+4. Press 1 to download flag/banner and copy WFE
+
+Press 2 to go to regional control page when you are done and follow instructions below
+
+### Restoring native information
+
+1. (Press 2 to go to regional control page)
+2. Press 2 to paste copied WFE, press 2 again to confirm
+3. Press 2 to open flag field
+4. Either click on a preset/no flag with mouse or press 2 again to upload flag from downloaded
+5. Press 2 to save changes
+6. Pressing 2 opens banner field, repeat 3-5 for banner
+
+restoring tags/embassies is not included as of right now, but might be in the future
+
+# Functions
+
+## Setting flag (defaults to 3)
+
+First press opens up flag field, either click on a preset/no flag with mouse or press 3 again to upload flag from downloaded
+
+When the "Save Changes" button lights up, press 3 again to save it
+
+## Setting banner (defaults to 4)
+
+Same as above but for banners
 
 ## Governor Rename (defaults to L)
 
@@ -71,6 +108,18 @@ This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant ho
 ## Toggle fast (defaults to I)
 
 Toggles between the fast.nationstates.net version of current page
+
+## Eyebeast arrow keys (defaults to arrow keys)
+
+Scroll through snapshots without needing to use a mouse
+
+## Getting detag information (defaults to 1)
+
+refer to usage section
+
+## Semiautomatic WFE/Flag/Banner restoring (defaults to 2)
+
+refer to usage section
 
 ## my scripts :D
 
