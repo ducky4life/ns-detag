@@ -117,7 +117,7 @@ document.addEventListener("keyup", function (event) { // no spam
 
                 // go to rmb
                 else if (window.location.href.includes("region=")){
-                    window.location.assign(domain + "/page=display_region_rmb/" + regionname + "&" + useragent);
+                    window.location.assign(domain + "/page=display_region_rmb/" + regionname + useragent);
                 }
                 break;
 
@@ -158,7 +158,7 @@ document.addEventListener("keyup", function (event) { // no spam
                 // go to region control page
                 else if (window.location.href.includes("eyebeast.calref.ca")) {
                     const eyebeast_region = document.getElementsByClassName("gold")[1].getAttribute("href");
-                    window.location.assign("https://www.nationstates.net/page=region_control/region=" + eyebeast_region.split("=")[1] + "&" + useragent);
+                    window.location.assign("https://www.nationstates.net/page=region_control/region=" + eyebeast_region.split("=")[1].split(identifier)[0] + useragent);
                 }
                 break;
                 
