@@ -158,7 +158,7 @@ document.addEventListener("keyup", function (event) { // no spam
                 // go to region control page
                 else if (window.location.href.includes("eyebeast.calref.ca")) {
                     const eyebeast_region = document.getElementsByClassName("gold")[1].getAttribute("href");
-                    window.location.assign("https://www.nationstates.net/page=region_control/region=" + eyebeast_region.split("=")[1]);
+                    window.location.assign("https://www.nationstates.net/page=region_control/region=" + eyebeast_region.split("=")[1] + "&" + useragent);
                 }
                 break;
                 
