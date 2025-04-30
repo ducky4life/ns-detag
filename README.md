@@ -43,7 +43,7 @@ const bannerkey = "Digit4"
 
 ### Getting detag information
 
-1. Press 1 to open up RMB, (un)suppress messages
+1. Press 1 to open up RMB, you can (un)suppress messages if needed
 2. Press 1 to open eyebeast
 3. Use arrow keys to find native snapshot
 4. Press 1 to download flag/banner and copy WFE
