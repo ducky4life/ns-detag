@@ -101,7 +101,7 @@ document.addEventListener("keyup", function (event) { // no spam
 
                 // go to eyebeast
                 if (window.location.href.includes("page=display_region_rmb")) {
-                    window.location.assign("https://eyebeast.calref.ca/?" + regionname.replace("page=display_region_rmb/", ""));
+                    window.location.assign("https://eyebeast.calref.ca/?" + regionname.replace("page=display_region_rmb/", "").split(identifier)[0]);
                 }
 
                 // download flags, copy wfe
