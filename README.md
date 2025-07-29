@@ -30,13 +30,17 @@ const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
 const detaginfokey = "Digit1"
 const detagactionkey = "Digit2"
-const flagkey = "Digit3"
-const bannerkey = "Digit4"
+const setembassykey = "Digit3"
+const settagskey = "Digit4"
+const flagkey = "Digit5"
+const bannerkey = "Digit6"
+const leftkey = "ArrowLeft"
+const rightkey = "ArrowRight"
 ```
 
 # Usage
 
-## Semiautomatic WFE/Flag/Banner restoring using the script
+## Semiautomatic region restoring using the script
 
 > [!IMPORTANT]
 > make sure you are logged in to RO nation and is on the region page
@@ -46,30 +50,50 @@ const bannerkey = "Digit4"
 1. Press 1 to open up RMB, you can (un)suppress messages if needed
 2. Press 1 to open eyebeast
 3. Use arrow keys to find native snapshot
-4. Press 1 to download flag/banner and copy WFE
+4. Press 1 to download flag/banner and save WFE
 
 Press 2 to go to regional control page when you are done and follow instructions below
 
 ### Restoring native information
 
 1. (Press 2 to go to regional control page)
-2. Press 2 to paste copied WFE, press 2 again to confirm
+2. Press 2 to paste saved WFE
 3. Press 2 to open flag field
 4. Either click on a preset/no flag with mouse or press 2 again to upload flag from downloaded
 5. Press 2 to save changes
 6. Pressing 2 opens banner field, repeat 3-5 for banner
 
-restoring tags/embassies is not included as of right now, but might be in the future
+### Restoring native embassies
+
+1. Press 3 to focus on the first embassy action button
+2. Use the left and right arrow keys to choose an embassy to withdraw/abort
+3. Press 3 again to click that button
+
+### Restoring native tags
+
+Note that you must have a saved snapshot of eyebeast with the native tags for this to work. Press 1 on an eyebeast snapshot to save. If you followed here from the [Getting detag information](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#getting-detag-information) section, you should have the tags saved already.
+
+1. Press 4 repeatedly to remove all current tags of the region
+2. Keep pressing 4 and the script will automatically add the saved tags, skipping those that cannot be added by a nation
+3. When the script finishes, the `Region tags added/removed!` notification at the top will display `from ns-detag: all tags are done` instead
 
 # Functions
 
-## Setting flag (defaults to 3)
+## Setting embassies (defaults to 3)
 
-First press opens up flag field, either click on a preset/no flag with mouse or press 3 again to upload flag from downloaded
+Refer to the [Restoring native embassies](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-embassies) section
 
-When the "Save Changes" button lights up, press 3 again to save it
+## Removing/adding tags (defaults to 4)
 
-## Setting banner (defaults to 4)
+Refer to the [Restoring native tags](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-tags) section
+
+## Setting flag (defaults to 5)
+
+First press opens up flag field, either click on a preset/no flag with mouse or press 5 again to upload flag from downloaded
+
+When the "Save Changes" button lights up, press 5 again to save it
+
+## Setting banner (defaults to 6)
 
 Same as above but for banners
 
@@ -115,11 +139,11 @@ Scroll through snapshots without needing to use a mouse
 
 ## Getting detag information (defaults to 1)
 
-refer to usage section
+Refer to the [Getting detag information](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#getting-detag-information) section
 
 ## Semiautomatic WFE/Flag/Banner restoring (defaults to 2)
 
-refer to usage section
+Refer to the [Restoring native information](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-information) section
 
 ## my scripts :D
 

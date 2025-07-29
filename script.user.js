@@ -1,19 +1,20 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      2.0.0
-// @description  meow
+// @version      2.1.0
+// @description  hopefully makes detags easier
 // @author       Ducky
 // @match        *://*.nationstates.net/*
 // @match        https://eyebeast.calref.ca/*
-// @grant        none
+// @grant        GM_setValue
+// @grant        GM_getValue
 // ==/UserScript==
 
 
 
 // Configuration
 
-const version = "2_0_0"
+const version = "2_1_0"
 const main_nation_name = "" // IMPORTANT Please set your main nation name here to comply with the new script rules. The script will not work properly if you do not.
 const password = "" // your password for your puppets (all puppets must share the same password)
 const ROname = "detag" // replace 'detag' with your RO name
@@ -32,17 +33,16 @@ const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
 const detaginfokey = "Digit1"
 const detagactionkey = "Digit2"
-const flagkey = "Digit3"
-const bannerkey = "Digit4"
+const setembassykey = "Digit3"
+const settagskey = "Digit4"
+const flagkey = "Digit5"
+const bannerkey = "Digit6"
 const leftkey = "ArrowLeft"
 const rightkey = "ArrowRight"
 
 
 
 // Code
-
-// some of the code here is modified from https://github.com/rootabeta/YAFFeather, thanks a lot!
-// ignore my shit code
 
 const regionlink = window.location.href
 const reg = /(?<=.nationstates.net).*$/
@@ -88,6 +88,53 @@ function set_image(type) {
     }
 }
 
+function set_tags(tags_list) {
+    const add_tags_box = document.getElementsByName("add_tag")[0];
+    const notif = document.querySelector("p.info");
+    const save_tags_button = document.getElementsByName("updatetagsbutton")[0];
+
+    // i have no idea what im doing
+    try {
+        add_tags_box.value = tags_list.at(-1);
+
+        console.log(tags_list)
+        console.log(tags_list.at(-1))
+
+        // if its a tag you cant add and tags arent done yet, remove the unaddable tag and try again
+        if (add_tags_box.options[add_tags_box.selectedIndex] === undefined && GM_getValue("tags").length != 0)  {
+            tags_list.pop();
+            GM_setValue("tags", tags_list);
+            set_tags(tags_list) // recursion scary
+        }
+
+        // if you are on your last tag, save that and remove the last one
+        else if (GM_getValue("tags").length == 1) {
+            tags_list.pop();
+            GM_setValue("tags", tags_list);
+            console.log("saved last")
+            save_tags_button.click();
+        }
+
+        // if there are no tags left, notify the user
+        else if (GM_getValue("tags").length == 0) {
+            notif.innerHTML = "from ns-detag: all tags are done"
+        }
+
+        // if the tag can be added, add it
+        else {
+            if (GM_getValue("tags").length > 1) {
+                tags_list.pop();
+                GM_setValue("tags", tags_list);
+            }
+            console.log("saved")
+            save_tags_button.click();
+        }
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
 // code i guess
 document.addEventListener("keyup", function (event) { // no spam
 	if (event.shiftKey || event.ctrlKey || event.altKey || document.activeElement.tagName == "INPUT" || document.activeElement.tagName == "TEXTAREA") { // u can use modifiers
@@ -108,9 +155,18 @@ document.addEventListener("keyup", function (event) { // no spam
                 else if (window.location.href.includes("eyebeast.calref.ca")) {
                     const flag = document.querySelector("pre:not(.inactive).data-display.flags");
                     const banner = document.querySelector("pre:not(.inactive).data-display.banners");
-                    const wfe_copy = document.querySelector("#copy");
+                    const wfe = document.querySelector("pre:not(.inactive).data-display.wfes").textContent;
+                    const tags = document.querySelector("pre:not(.inactive).data-display.tags").textContent.split("\n");
 
-                    wfe_copy.click();
+                    tags_list = tags.map(element => {
+                        const output = element.toLowerCase().replaceAll(' ', '-');
+                        return output;
+                    });
+
+                    GM_setValue("wfe", wfe);
+                    GM_setValue("tags", tags_list);
+                    GM_setValue("done_removing_tags", "false");
+                    console.log(GM_getValue("tags"));
                     flag.getElementsByTagName("a")[0].click();
                     banner.getElementsByTagName("a")[0].click();
                 }
@@ -124,9 +180,10 @@ document.addEventListener("keyup", function (event) { // no spam
 
 
                 case detagactionkey:
-                // detag stuff
+
+                // reset wfe/flag/banner
                 if (window.location.href.includes("page=region_control")) {
-                    // can prob make it 1 button click if GM storage instead of clipboard
+
                     const wfe_box = document.getElementById("editor");
                     const notif = document.querySelector("p.info");
 
@@ -135,22 +192,19 @@ document.addEventListener("keyup", function (event) { // no spam
                         if (notif.innerHTML == "World Factbook Entry updated!") {
                             set_image("flag");
                         }
-                        
+
                         // flag done
                         else if (notif.innerHTML == "Regional banner/flag updated!") {
                             set_image("banner");
                         }
                     }
-                    
+
                     // set wfe
                     else if (wfe_box.value === wfe_box.defaultValue) {
-                        navigator.clipboard.readText().then((text) => {
-                            wfe_box.value = text;
-                        });
-                    }
-
-                    // save wfe
-                    else {
+                        //navigator.clipboard.readText().then((text) => {
+                        //    wfe_box.value = text;
+                        //});
+                        wfe_box.value = GM_getValue("wfe", "error");
                         document.getElementById("setwfebutton").click();
                     }
                 }
@@ -162,6 +216,60 @@ document.addEventListener("keyup", function (event) { // no spam
                 }
                 break;
                 
+
+                // reset embassies
+                case setembassykey:
+                
+                embassies = [];
+                embassies_all = document.getElementsByClassName("shiny wide embassies mcollapse")[0].querySelectorAll("button.button.primary.icon.remove.danger");
+
+                // make a list of abort/withdraw embassies buttons
+                for (let j = 0; j < embassies_all.length; j++) {
+                    if (embassies_all[j].name === "cancelembassyregion" || embassies_all[j].name === "abortembassyregion") {
+                        embassies.push(embassies_all[j]);
+                    }
+                }
+                embassy_number = embassies.length;
+
+                // initial focus, if not already focused on embassy button, set focus to first button
+                if (document.activeElement.name != "cancelembassyregion" && document.activeElement.name != "abortembassyregion") {
+                    focused_index = 0;
+                    embassies[focused_index].focus();
+                }
+
+                // if focused on a button, click it
+                else {
+                    document.activeElement.click();
+                }
+                break;
+
+
+                // remove all tags, then add stored tags from eyebeast snapshot
+                case settagskey:
+
+                add_tags_box = document.getElementsByName("add_tag")[0];
+                remove_tags_box = document.getElementsByName("remove_tag")[0];
+                save_tags_button = document.getElementsByName("updatetagsbutton")[0];
+
+                // if all tags are removed, add back saved tags
+                if (GM_getValue("done_removing_tags") == "true") {
+                    set_tags(GM_getValue("tags"));
+                }
+
+                // if just finished removing tags, remember that
+                else if (remove_tags_box.options[2] === undefined) {
+                    GM_setValue("done_removing_tags", "true");
+                    save_tags_button.click();
+                }
+
+                // if there are still tags left, remove them
+                else {
+                    remove_tags_box.selectedIndex = 2; // the first tag is at index 2
+                    save_tags_button.click();
+                    console.log("removed");
+                }
+
+                break;
 
 
                 case flagkey:
@@ -176,12 +284,36 @@ document.addEventListener("keyup", function (event) { // no spam
 
 
                 case leftkey:
-                document.getElementById("forward").click();
+
+                // if on eyebeast, change snapshot
+                if (window.location.href.includes("eyebeast.calref.ca")) {
+                    document.getElementById("forward").click();
+                }
+
+                // if on region control, cycle through embassy buttons
+                else {
+                    if (focused_index > 0) {
+                        focused_index = focused_index - 1;
+                        embassies[focused_index].focus();
+                    }
+                }
                 break;
 
 
                 case rightkey:
+
+                // if on eyebeast, change snapshot
+                if (window.location.href.includes("eyebeast.calref.ca")) {
                 document.getElementById("backward").click();
+                }
+
+                // if on region control, cycle through embassy buttons
+                else {
+                    if (focused_index < embassy_number - 1) {
+                        focused_index = focused_index + 1;
+                        embassies[focused_index].focus();
+                    }
+                }
                 break;
 
 
