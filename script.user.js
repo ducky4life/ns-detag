@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Extra Detag Functionalities
 // @namespace    https://ducky4life.github.io/tgw
-// @version      2.1.0
+// @version      2.1.1
 // @description  hopefully makes detags easier
 // @author       Ducky
 // @match        *://*.nationstates.net/*
@@ -14,7 +14,7 @@
 
 // Configuration
 
-const version = "2_1_0"
+const version = "2_1_1"
 const main_nation_name = "" // IMPORTANT Please set your main nation name here to comply with the new script rules. The script will not work properly if you do not.
 const password = "" // your password for your puppets (all puppets must share the same password)
 const ROname = "detag" // replace 'detag' with your RO name
@@ -31,6 +31,7 @@ const toggletemplatekey = "KeyK"
 const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
+const crosskey = "KeyB"
 const detaginfokey = "Digit1"
 const detagactionkey = "Digit2"
 const setembassykey = "Digit3"
@@ -393,6 +394,12 @@ document.addEventListener("keyup", function (event) { // no spam
                 case puppetloginkey:
 
                 window.location.assign(domain + "/page=un" + useragent + "&" + nationpage + "&password=" + password + "&logging_in=1");
+                break;
+
+
+                case crosskey:
+
+                document.getElementsByClassName("button")[1].click();
                 break;
 		}
 	}

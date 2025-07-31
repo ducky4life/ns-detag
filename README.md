@@ -9,7 +9,7 @@ I use [TamperMonkey](https://www.tampermonkey.net/) for this, you can use whatev
 
 Download [script.user.js](https://github.com/ducky4life/ns-detag/raw/main/script.user.js) (or paste it in your script runner), enter your main nation, run it, enjoy
 
-If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically with the [Latest Release](https://github.com/ducky4life/ns-detag/releases/latest)
+If you use TamperMonkey, go to the script.user.js link above and TamperMonkey should pop up automatically
 
 # Configuration
 
@@ -28,6 +28,7 @@ const toggletemplatekey = "KeyK"
 const togglefastkey = "KeyI"
 const appointselfROkey = "KeyJ"
 const puppetloginkey = "KeyY"
+const crosskey = "KeyB"
 const detaginfokey = "Digit1"
 const detagactionkey = "Digit2"
 const setembassykey = "Digit3"
@@ -79,37 +80,29 @@ Note that you must have a saved snapshot of eyebeast with the native tags for th
 
 # Functions
 
-## Setting embassies (defaults to 3)
-
-Refer to the [Restoring native embassies](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-embassies) section
-
-## Removing/adding tags (defaults to 4)
-
-Refer to the [Restoring native tags](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-tags) section
-
-## Setting flag (defaults to 5)
+### Setting flag (defaults to 5)
 
 First press opens up flag field, either click on a preset/no flag with mouse or press 5 again to upload flag from downloaded
 
 When the "Save Changes" button lights up, press 5 again to save it
 
-## Setting banner (defaults to 6)
+### Setting banner (defaults to 6)
 
 Same as above but for banners
 
-## Governor Rename (defaults to L)
+### Governor Rename (defaults to L)
 
 First button press takes you to https://www.nationstates.net/page=regional_officer/region/office=governor/ if you are not there
  
 Second one replaces current gov name with the default one and immediately renames it
 
-## Appoint Self as Regional Officer (defaults to J)
+### Appoint Self as Regional Officer (defaults to J)
 
 Similar to renaming governor, but appointing your nation as RO instead with Appearance, Communications, and Embassies authorities.
 
 First button press takes you to https://www.nationstates.net/page=regional_officer/nation=yournationhere/ if you are not there, second one appoints RO.
 
-## Switcher Login (defaults to Y)
+### Switcher Login (defaults to Y)
 
 **Please set your password in the `const password = ` line in Configuration**
 
@@ -119,31 +112,43 @@ Works with template-overall=none pages, pressing the login key on the nation pag
 
 **Only works if you have the same password across your puppets, obviously don't use this on nations that aren't yours if you don't want to spam people with bad login attempts**
 
-## Eyebeast (defaults to O)
+### Eyebeast (defaults to O)
 
 Takes you to the [Eyebeast](https://eyebeast.calref.ca) page of the current region page (only works if you are on a region page)
 
-## Toggle template (defaults to K)
+### Toggle template (defaults to K)
 
 Toggles between the template-overall=none version of current page
 
 This feature is the same as the Breeze++ and Gauntlet feature, for my Reliant homies
 
-## Toggle fast (defaults to I)
+### Toggle fast (defaults to I)
 
 Toggles between the fast.nationstates.net version of current page
 
-## Eyebeast arrow keys (defaults to arrow keys)
+### Set reliant cross key (defaults to B)
+
+Clicks the cross button on reliant
+
+### Eyebeast arrow keys (defaults to arrow keys)
 
 Scroll through snapshots without needing to use a mouse
 
-## Getting detag information (defaults to 1)
+### Getting detag information (defaults to 1)
 
 Refer to the [Getting detag information](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#getting-detag-information) section
 
-## Semiautomatic WFE/Flag/Banner restoring (defaults to 2)
+### Semiautomatic WFE/Flag/Banner restoring (defaults to 2)
 
 Refer to the [Restoring native information](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-information) section
+
+### Setting embassies (defaults to 3)
+
+Refer to the [Restoring native embassies](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-embassies) section
+
+### Removing/adding tags (defaults to 4)
+
+Refer to the [Restoring native tags](https://github.com/ducky4life/ns-detag?tab=readme-ov-file#restoring-native-tags) section
 
 ## my scripts :D
 
